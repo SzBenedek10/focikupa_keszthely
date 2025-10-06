@@ -5,6 +5,7 @@
 #Szente Úr
 #xaml.cs kódokat csinálta
 #classok létrehozása
+//
 #Sinthoffer
 #xaml windowkat csinálta
 #classok logikai felépítése
