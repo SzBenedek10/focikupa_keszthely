@@ -1,0 +1,44 @@
+﻿<Window x:Class="focikupa_keszthely.EredmenyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Focikupa Pontozás" Height="400" Width="600">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+       
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+            <ComboBox x:Name="Csapat1ComboBox" Width="150" Margin="0 0 10 0"/>
+            <TextBox x:Name="Csapat1GolBox" Width="40" Margin="0 0 20 0"/>
+
+            <TextBlock Text=":" VerticalAlignment="Center" FontSize="16" Margin="0 0 20 0"/>
+
+            <TextBox x:Name="Csapat2GolBox" Width="40" Margin="0 0 10 0"/>
+            <ComboBox x:Name="Csapat2ComboBox" Width="150"/>
+        </StackPanel>
+
+       
+        <Button Grid.Row="1" Content="Eredmény rögzítése" Width="200" Height="30" 
+                HorizontalAlignment="Left" Click="EredmenyRogzites_Click"/>
+
+        
+        <DataGrid Grid.Row="2" x:Name="TabellaGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,10,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Helyezés" Binding="{Binding Index}" Width="60"/>
+                <DataGridTextColumn Header="Csapat" Binding="{Binding Nev}" Width="*"/>
+                <DataGridTextColumn Header="Pontok" Binding="{Binding Pontok}" Width="60"/>
+                <DataGridTextColumn Header="Gólkülönbség" Binding="{Binding GolKulonbseg}" Width="90"/>
+                <DataGridTextColumn Header="Mérkőzések" Binding="{Binding MegjatszottMerkozesek}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+
+
+    </Grid>
+</Window>

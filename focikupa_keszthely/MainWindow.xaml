@@ -1,0 +1,22 @@
+﻿<Window x:Class="focikupa_keszthely.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="focikupa_keszthely" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFEFEFEF">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" Content="Közgáz kupa"  FontSize="28"  FontWeight="Bold"  Foreground="DarkBlue"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="Tovább a csapatokhoz"  Width="200" Height="50"  Background="#FF2E86C1"   Foreground="White"  FontSize="14"  FontWeight="SemiBold"  BorderThickness="0" Click="Button_Click"/>
+    </Grid>
+</Window>

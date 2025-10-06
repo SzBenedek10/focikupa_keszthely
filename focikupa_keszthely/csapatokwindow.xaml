@@ -1,0 +1,40 @@
+﻿<Window x:Class="focikupa_keszthely.CsapatokWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Csapatok" Height="450" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="lstCsapatok"
+                 Grid.Row="0" Grid.Column="0"
+                 DisplayMemberPath="Nev"
+                 SelectionChanged="lstCsapatok_SelectionChanged"
+                 Margin="10"/>
+
+      
+        <ListView x:Name="lstJatekosok"
+                  Grid.Row="0" Grid.Column="1"
+                  Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Név" DisplayMemberBinding="{Binding Nev}" Width="150"/>
+                    <GridViewColumn Header="Kor" DisplayMemberBinding="{Binding Kor}" Width="50"/>
+                    <GridViewColumn Header="Pozíció" DisplayMemberBinding="{Binding Pozicio}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Grid.Row="1" Grid.Column="1"
+                Content="Eredmény bevitel"
+                HorizontalAlignment="Right"
+                Width="150" Height="40"
+                Margin="10"
+                Click="BtnEredmeny_Click"/>
+    </Grid>
+</Window>
